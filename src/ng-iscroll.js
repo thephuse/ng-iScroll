@@ -27,6 +27,10 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
     return {
         replace: false,
         restrict: 'A',
+        scope: {
+          myScrollOptions: '=',
+          myScroll: '='
+        },
         link: function (scope, element, attr)
         {
             // default timeout
